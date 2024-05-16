@@ -2,10 +2,13 @@
 'use client';
 
 import useAuth from "@/hooks/useAuth";
+import AdminHomepage from "@/components/pages/dashboard/Admin/AdminHomepage";
+
 const DashboardPage = () => {
 
 
     return (<>
+   
         <DashboardComponent />
     </>);
 };
@@ -21,12 +24,10 @@ const DashboardComponent = () => {
 const DashboardComponentUi = () => {
 
     const { userRole } = useAuth();
+    
     return (<>
 
-        <div>
-
-
-        </div>
+       {userRole=="admin"  && <AdminHomepage />}
     </>);
 };
 export default DashboardPage;

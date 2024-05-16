@@ -49,7 +49,8 @@ const LocalRoleChanger = () => {
     }
     return (<>
         <div className='absolute bottom-4 left-4 rounded shadow-lg '>
-            <select onChange={handleChange} value={userRole} className='py-2 px-2'>
+            <select onChange={handleChange} defaultValue={userRole} className='py-2 px-2'>
+            {/* <select onChange={handleChange} value={userRole} className='py-2 px-2'> */}
                 <option value={NotLoggedINUser}> {NotLoggedINUser}</option>
                 <option value={ADMINROLE}> {ADMINROLE}</option>
                 <option value={TEACHERROLE}> {TEACHERROLE}</option>

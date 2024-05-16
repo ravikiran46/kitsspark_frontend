@@ -15,7 +15,7 @@ const AdminDashboardLayout = ({ children }) => {
     return (<>
         <div className="md:flex md:h-full">
 
-            <div className="md:w-56 overflow-y-auto " >
+            <div className="md:w-56 overflow-y-auto  " >
 
                 <button className="border-2 m-1 py-1 px-2 p-1 md:hidden" onClick={submenuHandler}>
 
@@ -26,7 +26,7 @@ const AdminDashboardLayout = ({ children }) => {
               <SubMenuNavBar isSubmenuOpen={isSubmenuOpen} submenuHandler={submenuHandler} subMenuRef={subMenuRef} />
               </div>
             </div>
-            <div className="md:flex-1 bg-white h-full">
+            <div className="md:flex-1 bg-gray-100 h-full">
                 {children}
             </div>
         </div>
@@ -35,21 +35,14 @@ const AdminDashboardLayout = ({ children }) => {
 }
 
 const NavItems = [
-    {
-        title: 'Blogs',
-        link: 'dashboard/blog'
-    },
-    {
-        title: 'Blogs',
-        link: 'dashboard/blog'
-    }
+   
 ]
 
 const SubMenuNavBar = ({ subMenuRef }) => {
 
     return (
         <>
-            <div ref={subMenuRef} className={` absolute md:static w-0 bg-white md:w-full overflow-hidden  h-[80vh] transition-all duration-1000	    `}>
+            <div ref={subMenuRef} className={`absolute  md:static w-0 h-full bg-blue-500 md:w-full overflow-hidden   transition-all duration-1000	    `}>
 
                 <div className="flex   flex-col justify-center gap-5  items-center md:justify-normal md:items-center list-none h-full">
                     {NavItems.map((item, index) => (
